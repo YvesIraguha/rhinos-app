@@ -1,10 +1,19 @@
-const url = "https://localhost:3000/api/v1/auth";
+const url = "http://localhost:3000/api/v1/users/login";
 
 const loginUser = async ({ email, password }) => {
-  const response = await fetch(url, { email, password });
-  const result = await response.json();
+  const response = await fetch(url, {
+    method: "POST",
+    mode: "cors",
+    cached: "no-cache",
+    headers: {
+      "Content-type": "application/json",
+    },
+    referrerPolicy: "no-referrer",
+    body: JSON.stringify({ email, password }),
+  });
 
-  const user = result.data;
+  const user = await response.json();
+
   return user;
 };
 
