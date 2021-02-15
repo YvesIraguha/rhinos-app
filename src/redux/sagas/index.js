@@ -1,10 +1,14 @@
-import { put } from "redux-saga/effects";
-
-import { INITIAL_ACTION } from "../actionTypes";
+import { call, takeLatest } from "redux-saga/effects";
+import login from "../../services/API/login";
 
 // worker Saga: will be fired on INITIAL_ACTION actions
-function* initialSaga() {
-  yield put({ type: INITIAL_ACTION, payload: { lastName: "YVes" } });
+function* loginUser(data) {
+  try {
+    const apiResponse = yield call(login, data);
+    return apiResponse;
+  } catch {
+    yield "Error is happening";
+  }
 }
 
-export default initialSaga;
+export default loginUser;
