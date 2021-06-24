@@ -5,10 +5,7 @@ import Login from "./pages/Login";
 
 const App = () => {
   return (
-    <div style={{ backgroundColor: " #0891BF " }}>
-      <h1 className="text-center mt-28 font-mono text-4xl text-blue-500 font-bold transform hover:scale-50 transition ease-in duration-500 cursor-pointer tracking-wider">
-        🤗 Welcome to Lost and found web app!
-      </h1>
+    <div style={{ backgroundColor: "#0891BF", height: "100vh" }}>
       <Login />
     </div>
   );
