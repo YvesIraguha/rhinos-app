@@ -1,0 +1,13 @@
+.login__container {
+  background-image: url("./pages/Login/background.svg");
+  background-size: cover;
+  height: 300px;
+  padding: 20px;
+}
+
+.login__bottom {
+  background-image: url("./pages/Login/bottom.svg");
+  background-size: cover;
+  height: 135px;
+  bottom: 0px;
+}
