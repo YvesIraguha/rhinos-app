@@ -4,7 +4,8 @@ const RecordItemForm = ({ handleRegisterItem }) => {
   const [name, setName] = useState("");
   const [itemId, setItemId] = useState("");
 
-  const onRegisterItem = () => {
+  const onRegisterItem = (e) => {
+    e.preventDefault();
     handleRegisterItem(name, itemId);
   };
 

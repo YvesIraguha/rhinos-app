@@ -5,6 +5,7 @@ import React from "react";
 import { ApolloProvider } from "@apollo/client";
 import client from "./apolloClient";
 import ItemsList from "./containers/ItemsList";
+import RecordItem from "./containers/RecordItem";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           🤗 Welcome to Lost and found web app!
         </h1>
         <ItemsList />
+        <RecordItem />
       </div>
     </ApolloProvider>
   );
