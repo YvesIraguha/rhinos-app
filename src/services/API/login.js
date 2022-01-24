@@ -1,3 +1,5 @@
+import currentLang from '../../helpers/currentLang';
+
 const url = "http://localhost:3000/api/v1/users/login";
 
 const loginUser = async ({ email, password }) => {
@@ -7,6 +9,7 @@ const loginUser = async ({ email, password }) => {
     cached: "no-cache",
     headers: {
       "Content-type": "application/json",
+      "Accept-Language": currentLang
     },
     referrerPolicy: "no-referrer",
     body: JSON.stringify({ email, password }),
